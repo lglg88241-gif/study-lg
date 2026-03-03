@@ -1,0 +1,654 @@
+2026-02-28 12:47:44,986 - Main - INFO - 🚀 法律知识图谱 Agent 系统启动中...
+2026-02-28 12:47:45,001 - services.legal_agent - INFO - ✅ LegalGraphAgent 业务组件初始化成功
+2026-02-28 12:47:45,003 - services.legal_agent - INFO - 🧬 正在从图数据库检索人物关系: 李四
+2026-02-28 12:47:47,196 - services.legal_agent - INFO - 📚 正在执行向量检索，匹配法律条文...
+2026-02-28 12:47:47,197 - services.llm_service - INFO - 🧬 正在生成文本向量...
+2026-02-28 12:47:50,291 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2026-02-28 12:47:50,358 - services.legal_agent - INFO - ✅ 成功匹配到 2 条相关法典
+2026-02-28 12:47:50,360 - services.legal_agent - INFO - 🤖 正在请求大模型生成最终法律意见书...
+2026-02-28 12:48:29,323 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-28 13:25:59,075 - Main - INFO - 🚀 法律知识图谱 Agent 系统启动中...
+2026-02-28 13:25:59,093 - services.legal_agent - INFO - ✅ LegalGraphAgent 业务组件初始化成功
+2026-02-28 13:25:59,093 - services.legal_agent - INFO - 🎯 开始处理法律咨询任务: 主体=李四, 问题=我被开除了还要赔钱吗？
+2026-02-28 13:25:59,095 - services.legal_agent - INFO - 🧬 正在从图数据库检索人物关系: 李四
+2026-02-28 13:26:01,197 - services.legal_agent - INFO - 📚 正在执行向量检索，匹配法律条文...
+2026-02-28 13:26:01,197 - services.llm_service - INFO - 🧬 正在生成文本向量...
+2026-02-28 13:26:03,504 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2026-02-28 13:26:03,538 - services.legal_agent - INFO - ✅ 成功匹配到 2 条相关法典
+2026-02-28 13:26:03,538 - services.legal_agent - INFO - 🤖 正在请求大模型生成最终法律意见书...
+2026-02-28 13:26:40,243 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-28 13:26:40,256 - services.legal_agent - INFO - ✅ 法律建议生成完毕
+2026-02-28 13:31:25,128 - Main - INFO - 🚀 法律知识图谱 Agent 系统启动中...
+2026-02-28 13:31:25,146 - services.legal_agent - INFO - ✅ LegalGraphAgent 业务组件初始化成功
+2026-02-28 13:31:25,148 - services.legal_agent - INFO - 🎯 开始处理法律咨询任务: 主体=李四, 问题=我被开除了还要赔钱吗？
+2026-02-28 13:31:25,148 - services.legal_agent - INFO - 🧬 正在从图数据库检索人物关系: 李四
+2026-02-28 13:31:27,242 - services.legal_agent - INFO - 📚 正在执行向量检索，匹配法律条文...
+2026-02-28 13:31:27,242 - services.llm_service - INFO - 🧬 正在生成文本向量...
+2026-02-28 13:31:30,552 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2026-02-28 13:31:30,599 - services.legal_agent - INFO - ✅ 成功匹配到 2 条相关法典
+2026-02-28 13:31:30,599 - services.legal_agent - INFO - 🤖 正在请求大模型生成最终法律意见书...
+2026-02-28 13:32:23,422 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-28 13:32:23,437 - services.legal_agent - INFO - ✅ 法律建议生成完毕
+2026-03-01 11:08:35,321 - Main - INFO - 🚀 法律知识图谱 Agent 系统启动中...
+2026-03-01 11:08:35,338 - services.legal_agent - INFO - ✅ LegalGraphAgent 业务组件初始化成功
+2026-03-01 11:08:35,338 - services.legal_agent - INFO - 🎯 开始处理法律咨询任务: 主体=李四, 问题=我被开除了还要赔钱吗？
+2026-03-01 11:08:35,338 - services.legal_agent - INFO - 🧬 正在从图数据库检索人物关系: 李四
+2026-03-01 11:08:39,411 - services.legal_agent - INFO - 📚 正在执行向量检索，匹配法律条文...
+2026-03-01 11:08:39,411 - services.llm_service - INFO - 🧬 正在生成文本向量...
+2026-03-01 11:08:39,765 - Main - ERROR - 💥 系统运行中发生致命错误: Couldn't connect to localhost:7687 (resolved to ('[::1]:7687', '127.0.0.1:7687')):
+Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [WinError 10061] 由于目标计算机积极拒绝，无法连接。)
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [WinError 10061] 由于目标计算机积极拒绝，无法连接。)
+Traceback (most recent call last):
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\neo4j\_async_compat\network\_bolt_socket.py", line 415, in _connect_secure
+    s.connect(resolved_address)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\neo4j\_sync\io\_bolt_socket.py", line 328, in connect
+    s = cls._connect_secure(
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\neo4j\_async_compat\network\_bolt_socket.py", line 432, in _connect_secure
+    raise ServiceUnavailable(
+neo4j.exceptions.ServiceUnavailable: Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [WinError 10061] 由于目标计算机积极拒绝，无法连接。)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\123\Desktop\study\main.py", line 35, in <module>
+    asyncio.run(main())
+  File "D:\Dev\python310\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "D:\Dev\python310\lib\asyncio\base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "c:\Users\123\Desktop\study\main.py", line 28, in main
+    advice = await agent.ask("李四", "我被开除了还要赔钱吗？")
+  File "c:\Users\123\Desktop\study\services\legal_agent.py", line 63, in ask
+    case_bg, law_bg = await asyncio.gather(
+  File "c:\Users\123\Desktop\study\services\legal_agent.py", line 20, in get_case_context
+    result = session.run(
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\neo4j\_sync\work\session.py", line 315, in run
+    self._connect(self._config.default_access_mode)
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\neo4j\_sync\work\session.py", line 136, in _connect
+    super()._connect(
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\neo4j\_sync\work\workspace.py", line 199, in _connect
+    self._connection = self._pool.acquire(**acquire_kwargs_)
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\neo4j\_sync\io\_pool.py", line 676, in acquire
+    return self._acquire(
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\neo4j\_sync\io\_pool.py", line 417, in _acquire
+    return connection_creator()
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\neo4j\_sync\io\_pool.py", line 230, in connection_creator
+    connection = self.opener(
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\neo4j\_sync\io\_pool.py", line 637, in opener
+    return Bolt.open(
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\neo4j\_sync\io\_bolt.py", line 368, in open
+    s, protocol_version, handshake, data = BoltSocket.connect(
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\neo4j\_sync\io\_bolt_socket.py", line 380, in connect
+    raise ServiceUnavailable(
+neo4j.exceptions.ServiceUnavailable: Couldn't connect to localhost:7687 (resolved to ('[::1]:7687', '127.0.0.1:7687')):
+Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [WinError 10061] 由于目标计算机积极拒绝，无法连接。)
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [WinError 10061] 由于目标计算机积极拒绝，无法连接。)
+2026-03-01 11:09:18,077 - Main - INFO - 🚀 法律知识图谱 Agent 系统启动中...
+2026-03-01 11:09:18,100 - services.legal_agent - INFO - ✅ LegalGraphAgent 业务组件初始化成功
+2026-03-01 11:09:18,101 - services.legal_agent - INFO - 🎯 开始处理法律咨询任务: 主体=李四, 问题=我被开除了还要赔钱吗？
+2026-03-01 11:09:18,101 - services.legal_agent - INFO - 🧬 正在从图数据库检索人物关系: 李四
+2026-03-01 11:09:22,170 - services.legal_agent - INFO - 📚 正在执行向量检索，匹配法律条文...
+2026-03-01 11:09:22,170 - services.llm_service - INFO - 🧬 正在生成文本向量...
+2026-03-01 11:09:22,320 - Main - ERROR - 💥 系统运行中发生致命错误: Couldn't connect to localhost:7687 (resolved to ('[::1]:7687', '127.0.0.1:7687')):
+Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [WinError 10061] 由于目标计算机积极拒绝，无法连接。)
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [WinError 10061] 由于目标计算机积极拒绝，无法连接。)
+Traceback (most recent call last):
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\neo4j\_async_compat\network\_bolt_socket.py", line 415, in _connect_secure
+    s.connect(resolved_address)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\neo4j\_sync\io\_bolt_socket.py", line 328, in connect
+    s = cls._connect_secure(
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\neo4j\_async_compat\network\_bolt_socket.py", line 432, in _connect_secure
+    raise ServiceUnavailable(
+neo4j.exceptions.ServiceUnavailable: Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [WinError 10061] 由于目标计算机积极拒绝，无法连接。)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\123\Desktop\study\main.py", line 35, in <module>
+    asyncio.run(main())
+  File "D:\Dev\python310\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "D:\Dev\python310\lib\asyncio\base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "c:\Users\123\Desktop\study\main.py", line 28, in main
+    advice = await agent.ask("李四", "我被开除了还要赔钱吗？")
+  File "c:\Users\123\Desktop\study\services\legal_agent.py", line 63, in ask
+    case_bg, law_bg = await asyncio.gather(
+  File "c:\Users\123\Desktop\study\services\legal_agent.py", line 20, in get_case_context
+    result = session.run(
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\neo4j\_sync\work\session.py", line 315, in run
+    self._connect(self._config.default_access_mode)
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\neo4j\_sync\work\session.py", line 136, in _connect
+    super()._connect(
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\neo4j\_sync\work\workspace.py", line 199, in _connect
+    self._connection = self._pool.acquire(**acquire_kwargs_)
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\neo4j\_sync\io\_pool.py", line 676, in acquire
+    return self._acquire(
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\neo4j\_sync\io\_pool.py", line 417, in _acquire
+    return connection_creator()
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\neo4j\_sync\io\_pool.py", line 230, in connection_creator
+    connection = self.opener(
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\neo4j\_sync\io\_pool.py", line 637, in opener
+    return Bolt.open(
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\neo4j\_sync\io\_bolt.py", line 368, in open
+    s, protocol_version, handshake, data = BoltSocket.connect(
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\neo4j\_sync\io\_bolt_socket.py", line 380, in connect
+    raise ServiceUnavailable(
+neo4j.exceptions.ServiceUnavailable: Couldn't connect to localhost:7687 (resolved to ('[::1]:7687', '127.0.0.1:7687')):
+Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [WinError 10061] 由于目标计算机积极拒绝，无法连接。)
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [WinError 10061] 由于目标计算机积极拒绝，无法连接。)
+2026-03-01 11:09:52,809 - Main - INFO - 🚀 法律知识图谱 Agent 系统启动中...
+2026-03-01 11:09:52,829 - services.legal_agent - INFO - ✅ LegalGraphAgent 业务组件初始化成功
+2026-03-01 11:09:52,829 - services.legal_agent - INFO - 🎯 开始处理法律咨询任务: 主体=李四, 问题=我被开除了还要赔钱吗？
+2026-03-01 11:09:52,829 - services.legal_agent - INFO - 🧬 正在从图数据库检索人物关系: 李四
+2026-03-01 11:10:06,478 - services.legal_agent - INFO - 📚 正在执行向量检索，匹配法律条文...
+2026-03-01 11:10:06,479 - services.llm_service - INFO - 🧬 正在生成文本向量...
+2026-03-01 11:10:08,833 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2026-03-01 11:10:09,085 - services.legal_agent - INFO - ✅ 成功匹配到 2 条相关法典
+2026-03-01 11:10:09,085 - services.legal_agent - INFO - 🤖 正在请求大模型生成最终法律意见书...
+2026-03-01 11:10:47,787 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-01 11:10:47,815 - services.legal_agent - INFO - ✅ 法律建议生成完毕
+2026-03-01 11:36:02,517 - Main - INFO - 🚀 法律知识图谱 Agent 系统启动中...
+2026-03-01 11:36:02,559 - services.legal_agent - INFO - ✅ LegalGraphAgent 业务组件初始化成功
+2026-03-01 11:36:02,559 - services.legal_agent - INFO - 🎯 开始处理法律咨询任务: 主体=李四, 问题=我被开除了还要赔钱吗？
+2026-03-01 11:36:02,559 - services.legal_agent - INFO - 🧬 正在从图数据库检索人物关系: 李四
+2026-03-01 11:36:04,720 - services.legal_agent - INFO - 📚 正在执行向量检索，匹配法律条文...
+2026-03-01 11:36:04,720 - services.llm_service - INFO - 🧬 正在生成文本向量...
+2026-03-01 11:36:06,837 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2026-03-01 11:36:06,925 - services.legal_agent - INFO - ✅ 成功匹配到 2 条相关法典
+2026-03-01 11:36:06,926 - services.legal_agent - INFO - 🤖 正在请求大模型生成最终法律意见书...
+2026-03-01 11:36:45,052 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-01 11:36:45,063 - services.legal_agent - INFO - ✅ 法律建议生成完毕
+2026-03-01 12:04:14,940 - Main - INFO - 🚀 法律知识图谱 Agent 系统启动中...
+2026-03-01 12:04:14,940 - services.llama_agent - INFO - 🚀 正在初始化 LlamaIndex 属性图引擎...
+2026-03-01 12:04:18,232 - Main - ERROR - 💥 系统运行中发生致命错误: {code: Neo.ClientError.Procedure.ProcedureNotFound} {message: There is no procedure with the name `apoc.meta.data` registered for this database instance. Please ensure you've spelled the procedure name correctly and that the procedure is properly deployed.}
+neo4j.exceptions.GqlError: {gql_status: 42N08} {gql_status_description: error: syntax error or access rule violation - no such procedure. The procedure apoc.meta.data() was not found. Verify that the spelling is correct.} {message: 42N08: The procedure apoc.meta.data() was not found. Verify that the spelling is correct.} {diagnostic_record: {'_classification': 'CLIENT_ERROR', 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}} {raw_classification: CLIENT_ERROR}
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\123\Desktop\study\main.py", line 41, in <module>
+    asyncio.run(main())
+  File "D:\Dev\python310\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "D:\Dev\python310\lib\asyncio\base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "C:\Users\123\Desktop\study\main.py", line 29, in main
+    agent = LlamaGraphAgent()
+  File "C:\Users\123\Desktop\study\services\llama_agent.py", line 17, in __init__
+    self.graph_store = Neo4jPropertyGraphStore(
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\llama_index\graph_stores\neo4j\neo4j_property_graph.py", line 186, in __init__
+    self.refresh_schema()
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\llama_index\graph_stores\neo4j\neo4j_property_graph.py", line 215, in refresh_schema
+    node_query_results = self.structured_query(
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\llama_index\graph_stores\neo4j\neo4j_property_graph.py", line 619, in structured_query
+    data, _, _ = self._driver.execute_query(
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\neo4j\_sync\driver.py", line 978, in execute_query
+    return session._run_transaction(
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\neo4j\_sync\work\session.py", line 588, in _run_transaction
+    result = transaction_function(tx, *args, **kwargs)
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\neo4j\_work\query.py", line 144, in wrapped
+    return f(*args, **kwargs)
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\neo4j\_sync\driver.py", line 1314, in _work
+    res = tx.run(query, parameters)
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\neo4j\_sync\work\transaction.py", line 206, in run
+    result._tx_ready_run(query, parameters)
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\neo4j\_sync\work\result.py", line 177, in _tx_ready_run
+    self._run(query, parameters, None, None, None, None, None, None)
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\neo4j\_sync\work\result.py", line 236, in _run
+    self._attach()
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\neo4j\_sync\work\result.py", line 430, in _attach
+    self._connection.fetch_message()
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\neo4j\_sync\io\_common.py", line 193, in inner
+    func(*args, **kwargs)
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\neo4j\_sync\io\_bolt.py", line 863, in fetch_message
+    res = self._process_message(tag, fields)
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\neo4j\_sync\io\_bolt5.py", line 1208, in _process_message
+    response.on_failure(summary_metadata or {})
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\neo4j\_sync\io\_common.py", line 263, in on_failure
+    raise self._hydrate_error(metadata)
+neo4j.exceptions.ClientError: {code: Neo.ClientError.Procedure.ProcedureNotFound} {message: There is no procedure with the name `apoc.meta.data` registered for this database instance. Please ensure you've spelled the procedure name correctly and that the procedure is properly deployed.}
+2026-03-01 12:09:19,418 - Main - INFO - 🚀 法律知识图谱 Agent 系统启动中...
+2026-03-01 12:09:19,418 - services.llama_agent - INFO - 🚀 正在初始化 LlamaIndex 属性图引擎...
+2026-03-01 12:09:23,505 - neo4j.pool - WARNING - Transaction failed and will be retried in 0.8019647136467767s (Couldn't connect to localhost:7687 (resolved to ('[::1]:7687', '127.0.0.1:7687')):
+Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [WinError 10061] 由于目标计算机积极拒绝，无法连接。)
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [WinError 10061] 由于目标计算机积极拒绝，无法连接。))
+2026-03-01 12:09:55,108 - Main - ERROR - 💥 系统运行中发生致命错误: Unknown model 'qwen3.5-plus'. Please provide a valid OpenAI model name in: o1, o1-2024-12-17, o1-pro, o1-pro-2025-03-19, o1-preview, o1-preview-2024-09-12, o1-mini, o1-mini-2024-09-12, o3-mini, o3-mini-2025-01-31, o3, o3-2025-04-16, o3-pro, o3-pro-2025-06-10, o4-mini, o4-mini-2025-04-16, gpt-5, gpt-5-2025-08-07, gpt-5-chat, gpt-5-chat-latest, gpt-5-mini, gpt-5-mini-2025-08-07, gpt-5-nano, gpt-5-nano-2025-08-07, gpt-5-pro, gpt-5-pro-2025-10-06, gpt-5.1, gpt-5.1-2025-11-13, gpt-5.1-chat-latest, gpt-5.2, gpt-5.2-2025-12-11, gpt-5.2-chat-latest, gpt-4, gpt-4-32k, gpt-4-1106-preview, gpt-4-0125-preview, gpt-4-turbo-preview, gpt-4-vision-preview, gpt-4-1106-vision-preview, gpt-4-turbo-2024-04-09, gpt-4-turbo, gpt-4o, gpt-4o-audio-preview, gpt-4o-audio-preview-2024-12-17, gpt-4o-audio-preview-2024-10-01, gpt-4o-mini-audio-preview, gpt-4o-mini-audio-preview-2024-12-17, gpt-4o-2024-05-13, gpt-4o-2024-08-06, gpt-4o-2024-11-20, gpt-4.5-preview, gpt-4.5-preview-2025-02-27, chatgpt-4o-latest, gpt-4o-mini, gpt-4o-mini-2024-07-18, gpt-4-0613, gpt-4-32k-0613, gpt-4-0314, gpt-4-32k-0314, gpt-4.1, gpt-4.1-mini, gpt-4.1-nano, gpt-4.1-2025-04-14, gpt-4.1-mini-2025-04-14, gpt-4.1-nano-2025-04-14, gpt-3.5-turbo, gpt-3.5-turbo-16k, gpt-3.5-turbo-0125, gpt-3.5-turbo-1106, gpt-3.5-turbo-0613, gpt-3.5-turbo-16k-0613, gpt-3.5-turbo-0301, text-davinci-003, text-davinci-002, gpt-3.5-turbo-instruct, text-ada-001, text-babbage-001, text-curie-001, ada, babbage, curie, davinci, gpt-35-turbo-16k, gpt-35-turbo, gpt-35-turbo-0125, gpt-35-turbo-1106, gpt-35-turbo-0613, gpt-35-turbo-16k-0613
+Traceback (most recent call last):
+  File "C:\Users\123\Desktop\study\main.py", line 41, in <module>
+    asyncio.run(main())
+  File "D:\Dev\python310\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "D:\Dev\python310\lib\asyncio\base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "C:\Users\123\Desktop\study\main.py", line 29, in main
+    agent = LlamaGraphAgent()
+  File "C:\Users\123\Desktop\study\services\llama_agent.py", line 30, in __init__
+    self.query_engine = self.index.as_query_engine(
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\llama_index\core\indices\base.py", line 512, in as_query_engine
+    return RetrieverQueryEngine.from_args(
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\llama_index\core\query_engine\retriever_query_engine.py", line 108, in from_args
+    response_synthesizer = response_synthesizer or get_response_synthesizer(
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\llama_index\core\response_synthesizers\factory.py", line 63, in get_response_synthesizer
+    llm.metadata,
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\llama_index\llms\openai\base.py", line 384, in metadata
+    context_window=openai_modelname_to_contextsize(self._get_model_name()),
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\llama_index\llms\openai\utils.py", line 320, in openai_modelname_to_contextsize
+    raise ValueError(
+ValueError: Unknown model 'qwen3.5-plus'. Please provide a valid OpenAI model name in: o1, o1-2024-12-17, o1-pro, o1-pro-2025-03-19, o1-preview, o1-preview-2024-09-12, o1-mini, o1-mini-2024-09-12, o3-mini, o3-mini-2025-01-31, o3, o3-2025-04-16, o3-pro, o3-pro-2025-06-10, o4-mini, o4-mini-2025-04-16, gpt-5, gpt-5-2025-08-07, gpt-5-chat, gpt-5-chat-latest, gpt-5-mini, gpt-5-mini-2025-08-07, gpt-5-nano, gpt-5-nano-2025-08-07, gpt-5-pro, gpt-5-pro-2025-10-06, gpt-5.1, gpt-5.1-2025-11-13, gpt-5.1-chat-latest, gpt-5.2, gpt-5.2-2025-12-11, gpt-5.2-chat-latest, gpt-4, gpt-4-32k, gpt-4-1106-preview, gpt-4-0125-preview, gpt-4-turbo-preview, gpt-4-vision-preview, gpt-4-1106-vision-preview, gpt-4-turbo-2024-04-09, gpt-4-turbo, gpt-4o, gpt-4o-audio-preview, gpt-4o-audio-preview-2024-12-17, gpt-4o-audio-preview-2024-10-01, gpt-4o-mini-audio-preview, gpt-4o-mini-audio-preview-2024-12-17, gpt-4o-2024-05-13, gpt-4o-2024-08-06, gpt-4o-2024-11-20, gpt-4.5-preview, gpt-4.5-preview-2025-02-27, chatgpt-4o-latest, gpt-4o-mini, gpt-4o-mini-2024-07-18, gpt-4-0613, gpt-4-32k-0613, gpt-4-0314, gpt-4-32k-0314, gpt-4.1, gpt-4.1-mini, gpt-4.1-nano, gpt-4.1-2025-04-14, gpt-4.1-mini-2025-04-14, gpt-4.1-nano-2025-04-14, gpt-3.5-turbo, gpt-3.5-turbo-16k, gpt-3.5-turbo-0125, gpt-3.5-turbo-1106, gpt-3.5-turbo-0613, gpt-3.5-turbo-16k-0613, gpt-3.5-turbo-0301, text-davinci-003, text-davinci-002, gpt-3.5-turbo-instruct, text-ada-001, text-babbage-001, text-curie-001, ada, babbage, curie, davinci, gpt-35-turbo-16k, gpt-35-turbo, gpt-35-turbo-0125, gpt-35-turbo-1106, gpt-35-turbo-0613, gpt-35-turbo-16k-0613
+2026-03-01 12:10:12,115 - Main - INFO - 🚀 法律知识图谱 Agent 系统启动中...
+2026-03-01 12:10:12,117 - services.llama_agent - INFO - 🚀 正在初始化 LlamaIndex 属性图引擎...
+2026-03-01 12:10:17,310 - Main - ERROR - 💥 系统运行中发生致命错误: Unknown model 'qwen3.5-plus'. Please provide a valid OpenAI model name in: o1, o1-2024-12-17, o1-pro, o1-pro-2025-03-19, o1-preview, o1-preview-2024-09-12, o1-mini, o1-mini-2024-09-12, o3-mini, o3-mini-2025-01-31, o3, o3-2025-04-16, o3-pro, o3-pro-2025-06-10, o4-mini, o4-mini-2025-04-16, gpt-5, gpt-5-2025-08-07, gpt-5-chat, gpt-5-chat-latest, gpt-5-mini, gpt-5-mini-2025-08-07, gpt-5-nano, gpt-5-nano-2025-08-07, gpt-5-pro, gpt-5-pro-2025-10-06, gpt-5.1, gpt-5.1-2025-11-13, gpt-5.1-chat-latest, gpt-5.2, gpt-5.2-2025-12-11, gpt-5.2-chat-latest, gpt-4, gpt-4-32k, gpt-4-1106-preview, gpt-4-0125-preview, gpt-4-turbo-preview, gpt-4-vision-preview, gpt-4-1106-vision-preview, gpt-4-turbo-2024-04-09, gpt-4-turbo, gpt-4o, gpt-4o-audio-preview, gpt-4o-audio-preview-2024-12-17, gpt-4o-audio-preview-2024-10-01, gpt-4o-mini-audio-preview, gpt-4o-mini-audio-preview-2024-12-17, gpt-4o-2024-05-13, gpt-4o-2024-08-06, gpt-4o-2024-11-20, gpt-4.5-preview, gpt-4.5-preview-2025-02-27, chatgpt-4o-latest, gpt-4o-mini, gpt-4o-mini-2024-07-18, gpt-4-0613, gpt-4-32k-0613, gpt-4-0314, gpt-4-32k-0314, gpt-4.1, gpt-4.1-mini, gpt-4.1-nano, gpt-4.1-2025-04-14, gpt-4.1-mini-2025-04-14, gpt-4.1-nano-2025-04-14, gpt-3.5-turbo, gpt-3.5-turbo-16k, gpt-3.5-turbo-0125, gpt-3.5-turbo-1106, gpt-3.5-turbo-0613, gpt-3.5-turbo-16k-0613, gpt-3.5-turbo-0301, text-davinci-003, text-davinci-002, gpt-3.5-turbo-instruct, text-ada-001, text-babbage-001, text-curie-001, ada, babbage, curie, davinci, gpt-35-turbo-16k, gpt-35-turbo, gpt-35-turbo-0125, gpt-35-turbo-1106, gpt-35-turbo-0613, gpt-35-turbo-16k-0613
+Traceback (most recent call last):
+  File "C:\Users\123\Desktop\study\main.py", line 41, in <module>
+    asyncio.run(main())
+  File "D:\Dev\python310\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "D:\Dev\python310\lib\asyncio\base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "C:\Users\123\Desktop\study\main.py", line 29, in main
+    agent = LlamaGraphAgent()
+  File "C:\Users\123\Desktop\study\services\llama_agent.py", line 30, in __init__
+    self.query_engine = self.index.as_query_engine(
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\llama_index\core\indices\base.py", line 512, in as_query_engine
+    return RetrieverQueryEngine.from_args(
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\llama_index\core\query_engine\retriever_query_engine.py", line 108, in from_args
+    response_synthesizer = response_synthesizer or get_response_synthesizer(
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\llama_index\core\response_synthesizers\factory.py", line 63, in get_response_synthesizer
+    llm.metadata,
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\llama_index\llms\openai\base.py", line 384, in metadata
+    context_window=openai_modelname_to_contextsize(self._get_model_name()),
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\llama_index\llms\openai\utils.py", line 320, in openai_modelname_to_contextsize
+    raise ValueError(
+ValueError: Unknown model 'qwen3.5-plus'. Please provide a valid OpenAI model name in: o1, o1-2024-12-17, o1-pro, o1-pro-2025-03-19, o1-preview, o1-preview-2024-09-12, o1-mini, o1-mini-2024-09-12, o3-mini, o3-mini-2025-01-31, o3, o3-2025-04-16, o3-pro, o3-pro-2025-06-10, o4-mini, o4-mini-2025-04-16, gpt-5, gpt-5-2025-08-07, gpt-5-chat, gpt-5-chat-latest, gpt-5-mini, gpt-5-mini-2025-08-07, gpt-5-nano, gpt-5-nano-2025-08-07, gpt-5-pro, gpt-5-pro-2025-10-06, gpt-5.1, gpt-5.1-2025-11-13, gpt-5.1-chat-latest, gpt-5.2, gpt-5.2-2025-12-11, gpt-5.2-chat-latest, gpt-4, gpt-4-32k, gpt-4-1106-preview, gpt-4-0125-preview, gpt-4-turbo-preview, gpt-4-vision-preview, gpt-4-1106-vision-preview, gpt-4-turbo-2024-04-09, gpt-4-turbo, gpt-4o, gpt-4o-audio-preview, gpt-4o-audio-preview-2024-12-17, gpt-4o-audio-preview-2024-10-01, gpt-4o-mini-audio-preview, gpt-4o-mini-audio-preview-2024-12-17, gpt-4o-2024-05-13, gpt-4o-2024-08-06, gpt-4o-2024-11-20, gpt-4.5-preview, gpt-4.5-preview-2025-02-27, chatgpt-4o-latest, gpt-4o-mini, gpt-4o-mini-2024-07-18, gpt-4-0613, gpt-4-32k-0613, gpt-4-0314, gpt-4-32k-0314, gpt-4.1, gpt-4.1-mini, gpt-4.1-nano, gpt-4.1-2025-04-14, gpt-4.1-mini-2025-04-14, gpt-4.1-nano-2025-04-14, gpt-3.5-turbo, gpt-3.5-turbo-16k, gpt-3.5-turbo-0125, gpt-3.5-turbo-1106, gpt-3.5-turbo-0613, gpt-3.5-turbo-16k-0613, gpt-3.5-turbo-0301, text-davinci-003, text-davinci-002, gpt-3.5-turbo-instruct, text-ada-001, text-babbage-001, text-curie-001, ada, babbage, curie, davinci, gpt-35-turbo-16k, gpt-35-turbo, gpt-35-turbo-0125, gpt-35-turbo-1106, gpt-35-turbo-0613, gpt-35-turbo-16k-0613
+2026-03-01 12:16:09,985 - Main - INFO - 🚀 法律知识图谱 Agent 系统启动中...
+2026-03-01 12:16:09,985 - services.llama_agent - INFO - 🚀 正在初始化 LlamaIndex 属性图引擎...
+2026-03-01 12:16:12,620 - services.llama_agent - INFO - ✅ LlamaGraphAgent 自动化引擎就绪！
+2026-03-01 12:16:12,620 - services.llama_agent - INFO - 🎯 LlamaIndex 开始处理复杂提问: 请分析一下李四被开除的案情，他还需要赔钱吗？
+2026-03-01 12:16:44,508 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-01 12:16:45,154 - services.llama_agent - INFO - ✅ LlamaIndex 推理合成完毕
+2026-03-01 12:24:07,952 - Main - INFO - 🚀 法律知识图谱 Agent 系统启动中...
+2026-03-01 12:24:07,952 - services.llama_agent - INFO - 🚀 正在初始化 LlamaIndex 属性图引擎...
+2026-03-01 12:24:10,437 - Main - ERROR - 💥 系统运行中发生致命错误: TextToCypherRetriever.__init__() missing 1 required positional argument: 'graph_store'
+Traceback (most recent call last):
+  File "C:\Users\123\Desktop\study\main.py", line 41, in <module>
+    asyncio.run(main())
+  File "D:\Dev\python310\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "D:\Dev\python310\lib\asyncio\base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "C:\Users\123\Desktop\study\main.py", line 29, in main
+    agent = LlamaGraphAgent()
+  File "C:\Users\123\Desktop\study\services\llama_agent.py", line 31, in __init__
+    cypher_retriever = TextToCypherRetriever(
+TypeError: TextToCypherRetriever.__init__() missing 1 required positional argument: 'graph_store'
+2026-03-01 12:25:49,529 - Main - INFO - 🚀 法律知识图谱 Agent 系统启动中...
+2026-03-01 12:25:49,529 - services.llama_agent - INFO - 🚀 正在初始化 LlamaIndex 属性图引擎...
+2026-03-01 12:25:52,134 - services.llama_agent - INFO - ✅ LlamaGraphAgent 自动化引擎就绪！
+2026-03-01 12:25:52,134 - services.llama_agent - INFO - 🎯 LlamaIndex 开始处理复杂提问: 请分析一下李四被开除的案情，他还需要赔钱吗？
+2026-03-01 12:26:54,481 - openai._base_client - INFO - Retrying request to /chat/completions in 0.428460 seconds
+2026-03-01 12:27:56,247 - openai._base_client - INFO - Retrying request to /chat/completions in 0.822907 seconds
+2026-03-01 12:28:55,568 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-01 12:29:27,231 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-01 12:29:27,233 - services.llama_agent - INFO - ✅ LlamaIndex 推理合成完毕
+2026-03-01 12:40:58,537 - Main - INFO - 🚀 法律知识图谱 Agent 系统启动中...
+2026-03-01 12:40:58,537 - services.llama_agent - INFO - 🚀 正在初始化 LlamaIndex 混合检索引擎 (Graph + Vector)...
+2026-03-01 12:41:01,090 - services.llama_agent - INFO - ✅ LlamaGraphAgent 自动化引擎就绪！
+2026-03-01 12:41:01,090 - services.llama_agent - INFO - 🎯 LlamaIndex 开始处理复杂提问: 请分析一下李四被开除的案情，他还需要赔钱吗？
+2026-03-01 12:41:56,998 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-01 12:42:22,812 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-01 12:42:22,813 - services.llama_agent - INFO - ✅ LlamaIndex 推理合成完毕
+2026-03-01 15:48:15,936 - Main - INFO - 🚀 法律知识图谱 Agent 系统启动中...
+2026-03-01 15:48:15,937 - services.llama_agent - INFO - 🚀 正在初始化 LlamaIndex 混合检索引擎 (Graph + Vector)...
+2026-03-01 15:48:18,141 - services.llama_agent - INFO - ✅ LlamaGraphAgent 自动化引擎就绪！
+2026-03-01 15:48:18,141 - services.llama_agent - INFO - 🎯 LlamaIndex 开始处理复杂提问: 请详细分析一下李四被开除的案情。他被拖欠了多少钱？他在公司期间主要负责了什么项目？综合来看他还需要向公司赔钱吗？
+2026-03-01 15:49:14,419 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-01 15:49:50,328 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-01 15:49:50,332 - services.llama_agent - INFO - ✅ LlamaIndex 推理合成完毕
+2026-03-01 16:05:44,919 - Main - INFO - 🚀 法律知识图谱 Agent 系统启动中...
+2026-03-01 16:05:44,921 - services.llama_agent - INFO - 🚀 正在初始化 LlamaIndex 混合检索引擎 (Graph + Vector)...
+2026-03-01 16:05:47,959 - services.llama_agent - INFO - ✅ LlamaGraphAgent 自动化引擎就绪！
+2026-03-01 16:05:47,960 - services.llama_agent - INFO - 🎯 LlamaIndex 开始处理复杂提问: 请详细分析一下李四被开除的案情。他被拖欠了多少钱？他在公司期间主要负责了什么项目？综合来看他还需要向公司赔钱吗？
+2026-03-01 16:06:50,683 - openai._base_client - INFO - Retrying request to /chat/completions in 0.493878 seconds
+2026-03-01 16:07:52,565 - openai._base_client - INFO - Retrying request to /chat/completions in 0.919582 seconds
+2026-03-01 16:08:54,875 - openai._base_client - INFO - Retrying request to /chat/completions in 1.682760 seconds
+2026-03-01 16:09:57,851 - Main - ERROR - 💥 系统运行中发生致命错误: Request timed out.
+Traceback (most recent call last):
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\httpcore\_async\http_proxy.py", line 343, in handle_async_request
+    return await self._connection.handle_async_request(request)
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\httpcore\_async\http11.py", line 136, in handle_async_request
+    raise exc
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\httpcore\_async\http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\httpcore\_async\http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\httpcore\_async\http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\httpcore\_backends\anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+  File "D:\Dev\python310\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\openai\_base_client.py", line 1604, in request
+    response = await self._client.send(
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+  File "D:\Dev\python310\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\123\Desktop\study\main.py", line 41, in <module>
+    asyncio.run(main())
+  File "D:\Dev\python310\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "D:\Dev\python310\lib\asyncio\base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "C:\Users\123\Desktop\study\main.py", line 34, in main
+    advice = await agent.ask(query)
+  File "C:\Users\123\Desktop\study\services\llama_agent.py", line 58, in ask
+    response = await self.query_engine.aquery(question)
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\llama_index_instrumentation\dispatcher.py", line 386, in async_wrapper
+    result = await func(*args, **kwargs)
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\llama_index\core\base\base_query_engine.py", line 56, in aquery
+    query_result = await self._aquery(str_or_query_bundle)
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\llama_index_instrumentation\dispatcher.py", line 386, in async_wrapper
+    result = await func(*args, **kwargs)
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\llama_index\core\query_engine\retriever_query_engine.py", line 211, in _aquery
+    nodes = await self.aretrieve(query_bundle)
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\llama_index\core\query_engine\retriever_query_engine.py", line 153, in aretrieve
+    nodes = await self._retriever.aretrieve(query_bundle)
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\llama_index_instrumentation\dispatcher.py", line 386, in async_wrapper
+    result = await func(*args, **kwargs)
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\llama_index\core\base\base_retriever.py", line 241, in aretrieve
+    nodes = await self._aretrieve(query_bundle=query_bundle)
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\llama_index\core\indices\property_graph\retriever.py", line 66, in _aretrieve
+    async_results = await run_jobs(
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\llama_index_instrumentation\dispatcher.py", line 386, in async_wrapper
+    result = await func(*args, **kwargs)
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\llama_index\core\async_utils.py", line 172, in run_jobs
+    results = await asyncio.gather(*pool_jobs)
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\llama_index_instrumentation\dispatcher.py", line 386, in async_wrapper
+    result = await func(*args, **kwargs)
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\llama_index\core\async_utils.py", line 163, in worker
+    return await job
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\llama_index_instrumentation\dispatcher.py", line 386, in async_wrapper
+    result = await func(*args, **kwargs)
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\llama_index\core\base\base_retriever.py", line 241, in aretrieve
+    nodes = await self._aretrieve(query_bundle=query_bundle)
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\llama_index\core\indices\property_graph\sub_retrievers\base.py", line 150, in _aretrieve
+    nodes = await self.aretrieve_from_graph(query_bundle)
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\llama_index_instrumentation\dispatcher.py", line 386, in async_wrapper
+    result = await func(*args, **kwargs)
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\llama_index\core\indices\property_graph\sub_retrievers\text_to_cypher.py", line 186, in aretrieve_from_graph
+    response = await self.llm.apredict(
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\llama_index_instrumentation\dispatcher.py", line 386, in async_wrapper
+    result = await func(*args, **kwargs)
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\llama_index\core\llms\llm.py", line 716, in apredict
+    chat_response = await self.achat(messages)
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\llama_index_instrumentation\dispatcher.py", line 386, in async_wrapper
+    result = await func(*args, **kwargs)
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\llama_index\llms\openai_like\base.py", line 227, in achat
+    return await super().achat(messages, **kwargs)
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\llama_index_instrumentation\dispatcher.py", line 386, in async_wrapper
+    result = await func(*args, **kwargs)
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\llama_index\core\llms\callbacks.py", line 76, in wrapped_async_llm_chat
+    f_return_val = await f(_self, messages, **kwargs)
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\llama_index\llms\openai\base.py", line 713, in achat
+    return await achat_fn(messages, **kwargs)
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\tenacity\asyncio\__init__.py", line 193, in async_wrapped
+    return await copy(fn, *args, **kwargs)
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\tenacity\asyncio\__init__.py", line 112, in __call__
+    do = await self.iter(retry_state=retry_state)
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\tenacity\asyncio\__init__.py", line 157, in iter
+    result = await action(retry_state)
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\tenacity\_utils.py", line 111, in inner
+    return call(*args, **kwargs)
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\tenacity\__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\tenacity\__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+  File "D:\Dev\python310\lib\concurrent\futures\_base.py", line 451, in result
+    return self.__get_result()
+  File "D:\Dev\python310\lib\concurrent\futures\_base.py", line 403, in __get_result
+    raise self._exception
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\tenacity\asyncio\__init__.py", line 116, in __call__
+    result = await fn(*args, **kwargs)
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\llama_index\llms\openai\base.py", line 768, in _achat
+    response = await aclient.chat.completions.create(
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\openai\resources\chat\completions\completions.py", line 2676, in create
+    return await self._post(
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\openai\_base_client.py", line 1884, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+  File "C:\Users\123\Desktop\study\venv\lib\site-packages\openai\_base_client.py", line 1622, in request
+    raise APITimeoutError(request=request) from err
+openai.APITimeoutError: Request timed out.
+2026-03-01 16:13:40,435 - Main - INFO - 🚀 法律知识图谱 Agent 系统启动中...
+2026-03-01 16:13:40,435 - services.llama_agent - INFO - 🚀 正在初始化 LlamaIndex 混合检索引擎 (Graph + Vector)...
+2026-03-01 16:13:42,999 - services.llama_agent - INFO - ✅ LlamaGraphAgent 自动化引擎就绪！
+2026-03-01 16:13:43,000 - services.llama_agent - INFO - 🎯 LlamaIndex 开始处理复杂提问: 请详细分析一下李四被开除的案情。他被拖欠了多少钱？他在公司期间主要负责了什么项目？综合来看他还需要向公司赔钱吗？
+2026-03-01 16:15:04,722 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-01 16:16:08,403 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-01 16:17:21,447 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-01 16:18:27,329 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-01 16:19:36,714 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-01 16:21:02,175 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-01 16:22:19,927 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-01 16:23:19,082 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-01 16:24:54,679 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-01 16:25:55,080 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-01 16:27:14,802 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-01 16:27:32,116 - Main - INFO - 👋 用户手动停止了程序
+2026-03-01 16:30:44,971 - Main - INFO - 🚀 法律知识图谱 Agent 系统启动中...
+2026-03-01 16:30:44,973 - services.llama_agent - INFO - 🚀 正在初始化 LlamaIndex 混合检索引擎 (Graph + Vector)...
+2026-03-01 16:30:47,455 - services.llama_agent - INFO - ✅ LlamaGraphAgent 自动化引擎就绪！
+2026-03-01 16:30:47,455 - services.llama_agent - INFO - 🎯 LlamaIndex 开始处理复杂提问: 李四被拖欠了多少钱？
+2026-03-01 16:31:56,002 - Main - INFO - 👋 用户手动停止了程序
+2026-03-01 16:41:08,976 - Main - INFO - 🚀 法律知识图谱 Agent 系统启动中...
+2026-03-01 16:41:08,983 - services.legal_agent - INFO - 🚀 原生 Function Calling Agent 初始化中...
+2026-03-01 16:41:08,983 - services.legal_agent - INFO - 🧠 Agent 大脑开始思考如何解答: 请帮我查一下，李四在这个案子里被拖欠了多少钱？
+2026-03-01 16:41:11,290 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-01 16:41:11,303 - services.legal_agent - INFO - 🛠️ 大模型决策：我需要调用外部工具！
+2026-03-01 16:41:11,304 - services.legal_agent - INFO - 👉 选中的工具: search_case_details
+2026-03-01 16:41:11,304 - services.legal_agent - INFO - 👉 AI 提取的精准参数: {'entity_name': '李四'}
+2026-03-01 16:48:03,052 - Main - INFO - 🚀 法律知识图谱 Agent 系统启动中...
+2026-03-01 16:48:03,058 - services.legal_agent - INFO - 🚀 原生 Function Calling Agent 初始化中...
+2026-03-01 16:48:03,058 - services.legal_agent - INFO - 🧠 Agent 开始思考: 请帮我查一下，李四在这个案子里被拖欠了多少钱？
+2026-03-01 16:48:05,349 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-01 16:48:05,420 - services.legal_agent - INFO - 🛠️ 大模型决策：我需要调用外部工具！
+2026-03-01 16:48:05,422 - services.legal_agent - INFO - 👉 执行工具: search_case_details | 参数: {'entity_name': '李四'}
+2026-03-01 16:48:05,422 - services.legal_agent - INFO - 🔍 正在深入图谱查询实体: 李四
+2026-03-01 16:48:07,655 - services.legal_agent - INFO - ✅ 数据库返回了线索数据，正准备喂回给大模型...
+2026-03-01 16:48:07,655 - services.legal_agent - INFO - 🧠 带着查到的线索，请求大模型进行终极推理...
+2026-03-01 16:48:13,825 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-01 16:48:13,828 - services.legal_agent - INFO - ✅ 推理完成！
+2026-03-01 16:54:32,141 - Main - INFO - 🚀 法律知识图谱 Agent 系统启动中...
+2026-03-01 16:54:32,145 - services.legal_agent - INFO - 🚀 原生 Function Calling Agent 初始化中...
+2026-03-01 16:54:32,147 - services.legal_agent - INFO - 🧠 Agent 开始思考: 请帮我查一下，李四在这个案子里被拖欠了多少钱？
+2026-03-01 16:54:34,623 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-01 16:54:34,697 - services.legal_agent - INFO - 🛠️ 大模型决策：我需要调用外部工具！
+2026-03-01 16:54:34,697 - services.legal_agent - INFO - 👉 执行工具: search_case_details | 参数: {'entity_name': '李四'}
+2026-03-01 16:54:34,698 - services.legal_agent - INFO - 🔍 正在深入图谱进行 2 跳漫游查询: 李四
+2026-03-01 16:54:37,092 - services.legal_agent - INFO - ✅ 数据库返回了线索数据，正准备喂回给大模型...
+2026-03-01 16:54:37,093 - services.legal_agent - INFO - 🧠 带着查到的线索，请求大模型进行终极推理...
+2026-03-01 16:54:45,918 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-01 16:54:45,920 - services.legal_agent - INFO - ✅ 推理完成！
+2026-03-01 17:14:59,599 - Main - INFO - 🚀 法律知识图谱 Agent 系统启动中...
+2026-03-01 17:14:59,604 - services.legal_agent - INFO - 🚀 原生 Function Calling Agent 初始化中...
+2026-03-01 17:14:59,605 - services.legal_agent - INFO - 🧠 Agent 开始思考: 请帮我分析一下：李四试用期的工资发得合法吗？按法律规定应该发多少？他实际被发了多少？
+2026-03-01 17:15:02,255 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-01 17:15:02,270 - services.legal_agent - INFO - 🛠️ 大模型决策：我需要调用外部工具！
+2026-03-01 17:15:02,270 - services.legal_agent - INFO - 👉 执行工具: search_law_articles | 参数: {'keyword': '试用期工资规定'}
+2026-03-01 17:15:02,272 - services.legal_agent - INFO - 📚 正在翻阅法典，检索关键词: 试用期工资规定
+2026-03-01 17:15:02,272 - services.llm_service - INFO - 🧬 正在生成文本向量...
+2026-03-01 17:15:02,575 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2026-03-01 17:15:02,708 - services.legal_agent - INFO - ✅ 工具 [search_law_articles] 执行完毕，准备喂回数据...
+2026-03-01 17:15:02,708 - services.legal_agent - INFO - 👉 执行工具: search_case_details | 参数: {'entity_name': '李四'}
+2026-03-01 17:15:02,708 - services.legal_agent - INFO - 🔍 正在深入图谱进行 2 跳漫游查询: 李四
+2026-03-01 17:15:04,775 - services.legal_agent - INFO - ✅ 工具 [search_case_details] 执行完毕，准备喂回数据...
+2026-03-01 17:15:04,775 - services.legal_agent - INFO - 🧠 带着查到的线索，请求大模型进行终极推理...
+2026-03-01 17:15:14,560 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-01 17:15:14,563 - services.legal_agent - INFO - ✅ 推理完成！
+2026-03-01 17:54:57,364 - Main - INFO - 🚀 法律知识图谱 Agent 系统启动中...
+2026-03-01 17:54:57,371 - services.legal_agent - INFO - 🚀 原生 Function Calling Agent 初始化中...
+2026-03-01 17:55:06,798 - services.legal_agent - INFO - 🧠 Agent 开始思考: 李四试用期的工资，实际只发了多少钱？
+2026-03-01 17:55:08,742 - services.legal_agent - INFO - 🛠️ 大模型决策：我需要调用外部工具！
+2026-03-01 17:55:08,742 - services.legal_agent - INFO - 👉 执行工具: search_case_details | 参数: {'entity_name': '李四'}
+2026-03-01 17:55:08,742 - services.legal_agent - INFO - 🔍 正在深入图谱进行 2 跳漫游查询: 李四
+2026-03-01 17:55:10,893 - services.legal_agent - INFO - ✅ 工具 [search_case_details] 执行完毕，准备喂回数据...
+2026-03-01 17:55:10,893 - services.legal_agent - INFO - 🧠 带着查到的线索，请求大模型进行终极推理...
+2026-03-01 17:55:17,345 - services.legal_agent - INFO - ✅ 推理完成！
+2026-03-01 17:55:43,010 - services.legal_agent - INFO - 🧠 Agent 开始思考: 公司这么发合法吗？按规定到底该发多少？
+2026-03-01 17:55:45,262 - services.legal_agent - INFO - 🛠️ 大模型决策：我需要调用外部工具！
+2026-03-01 17:55:45,264 - services.legal_agent - INFO - 👉 执行工具: search_law_articles | 参数: {'keyword': '试用期工资规定'}
+2026-03-01 17:55:45,264 - services.legal_agent - INFO - 📚 正在翻阅法典，检索关键词: 试用期工资规定
+2026-03-01 17:55:45,264 - services.llm_service - INFO - 🧬 正在生成文本向量...
+2026-03-01 17:55:45,611 - services.legal_agent - INFO - ✅ 工具 [search_law_articles] 执行完毕，准备喂回数据...
+2026-03-01 17:55:45,613 - services.legal_agent - INFO - 🧠 带着查到的线索，请求大模型进行终极推理...
+2026-03-01 17:55:47,208 - services.legal_agent - INFO - ✅ 推理完成！
+2026-03-01 17:55:58,882 - services.legal_agent - INFO - 🧠 Agent 开始思考: 那他这三个月总共亏了多少钱？能要回来吗？
+2026-03-01 17:56:14,783 - services.legal_agent - INFO - 💬 简单问题，大模型直接回答。
+2026-03-01 18:03:45,866 - Main - INFO - 🚀 法律知识图谱 Agent 系统启动中...
+2026-03-01 18:03:45,874 - services.legal_agent - INFO - 🚀 原生 Function Calling Agent 初始化中...
+2026-03-01 18:04:04,480 - services.legal_agent - INFO - 🧠 Agent 开始思考: 李四试用期的工资，实际只发了多少钱？
+2026-03-01 18:04:06,150 - services.legal_agent - INFO - 🛠️ 大模型决策：我需要调用外部工具！
+2026-03-01 18:04:06,152 - services.legal_agent - INFO - 👉 执行工具: search_case_details | 参数: {'entity_name': '李四'}
+2026-03-01 18:04:06,152 - services.legal_agent - INFO - 🔍 正在深入图谱进行 2 跳漫游查询: 李四
+2026-03-01 18:04:08,235 - services.legal_agent - INFO - ✅ 工具 [search_case_details] 执行完毕，准备喂回数据...
+2026-03-01 18:04:08,235 - services.legal_agent - INFO - 🧠 带着查到的线索，请求大模型进行终极推理...
+2026-03-01 18:04:17,127 - services.legal_agent - INFO - ✅ 推理完成！
+2026-03-01 18:04:25,259 - services.legal_agent - INFO - 🧠 Agent 开始思考: 公司这么发合法吗？按规定到底该发多少？
+2026-03-01 18:04:27,377 - services.legal_agent - INFO - 🛠️ 大模型决策：我需要调用外部工具！
+2026-03-01 18:04:27,377 - services.legal_agent - INFO - 👉 执行工具: search_law_articles | 参数: {'keyword': '试用期工资规定'}
+2026-03-01 18:04:27,377 - services.legal_agent - INFO - 📚 正在翻阅法典，检索关键词: 试用期工资规定
+2026-03-01 18:04:27,378 - services.llm_service - INFO - 🧬 正在生成文本向量...
+2026-03-01 18:04:27,837 - services.legal_agent - INFO - ⚖️ 成功精准检索到以下法条：
+《劳动合同法》第八十二条：用人单位自用工之日起超过一个月不满一年未与劳动者订立书面劳动合同的，应当向劳动者每月支付二倍的工资。
+
+《劳动合同法》第四十七条：经济补偿按劳动者在本单位工作的年限，每满一年支付一个月工资的标准向劳动者支付。六个月以上不满一年的，按一年计算；不满六个月的，向劳动者支付半个月工资的经济补偿。
+2026-03-01 18:04:27,837 - services.legal_agent - INFO - ✅ 工具 [search_law_articles] 执行完毕，准备喂回数据...
+2026-03-01 18:04:27,838 - services.legal_agent - INFO - 🧠 带着查到的线索，请求大模型进行终极推理...
+2026-03-01 18:04:30,108 - services.legal_agent - INFO - ✅ 推理完成！
+2026-03-01 18:04:44,157 - services.legal_agent - INFO - 🧠 Agent 开始思考: 那他这三个月总共亏了多少钱？能要回来吗？
+2026-03-01 18:04:53,613 - services.legal_agent - INFO - 💬 简单问题，大模型直接回答。
+2026-03-01 18:22:25,985 - Main - INFO - 🚀 法律知识图谱 Agent 系统启动中...
+2026-03-01 18:22:25,991 - services.legal_agent - INFO - 🚀 原生 Function Calling Agent 初始化中...
+2026-03-01 18:22:38,256 - services.legal_agent - INFO - 🧠 Agent 开始思考: 李四试用期的工资，实际只发了多少钱？
+2026-03-01 18:22:39,904 - services.legal_agent - INFO - 🛠️ 大模型决策：我需要调用外部工具！
+2026-03-01 18:22:39,904 - services.legal_agent - INFO - 👉 执行工具: search_case_details | 参数: {'entity_name': '李四'}
+2026-03-01 18:22:39,905 - services.legal_agent - INFO - 🔍 正在深入图谱进行 2 跳漫游查询: 李四
+2026-03-01 18:22:41,992 - services.legal_agent - INFO - ✅ 工具 [search_case_details] 执行完毕，准备喂回数据...
+2026-03-01 18:22:41,992 - services.legal_agent - INFO - 🧠 带着查到的线索，请求大模型进行终极推理...
+2026-03-01 18:23:25,536 - services.legal_agent - INFO - ✅ 推理完成！
+2026-03-01 18:24:30,958 - services.legal_agent - INFO - 🧠 Agent 开始思考: 公司这么发合法吗？按规定到底该发多少？
+2026-03-01 18:24:32,929 - services.legal_agent - INFO - 🛠️ 大模型决策：我需要调用外部工具！
+2026-03-01 18:24:32,929 - services.legal_agent - INFO - 👉 执行工具: search_law_articles | 参数: {'keyword': '试用期工资规定'}
+2026-03-01 18:24:32,929 - services.legal_agent - INFO - 📚 正在翻阅法典，检索关键词: 试用期工资规定
+2026-03-01 18:24:32,931 - services.llm_service - INFO - 🧬 正在生成文本向量...
+2026-03-01 18:24:33,449 - services.legal_agent - INFO - ⚖️ 成功精准检索到以下法条：
+第十九条　劳动合同期限三个月以上不满一年的，试用期不得超过一个月；劳动合同期限一年以上不满三年的，试用期不得超过二个月；三年以上固定期限和无固定期限的劳动合同，试用期不得超过六个月。
+　　　　同一用人单位与同一劳动者只能约定一次试用期。
+　　　　以完成一定工作任务为期限的劳动合同或者劳动合同期限不满三个月的，不得约定试用期。
+　　　　试用期包含在劳动合同期限内。劳动合同仅约定试用期的，试用期不成立，该期限为劳动合同期限。
+　　　　第二十条　劳动者在试用期的工资不得低于本单位相同岗位最低档工资或者劳动合同约定工资的百分之八十，并不得低于用人单位所在地的最低工资标准。
+　　　　第二十一条　在试用期中，除劳动者有本法第三十九条和第四十条第一项、第二项规定的情形外，用人单位不得解除劳动合同。用人单位在试用期解除劳动合同的，应当向劳动者说明理由。
+　　　　第二十二条　用人单位为劳动者提供专项培训费用，对其进行专业技术培训的，可以与该劳动者订立协议，约定服务期。
+　　　　劳动者违反服务期约定的，应当按照约定向用人单位支付违约金。违约金的数额不得超过用人单位提供的培训费用。
+
+第七十条　非全日制用工双方当事人不得约定试用期。
+　　　　第七十一条　非全日制用工双方当事人任何一方都可以随时通知对方终止用工。终止用工，用人单位不向劳动者支付经济补偿。
+　　　　第七十二条　非全日制用工小时计酬标准不得低于用人单位所在地人民政府规定的最低小时工资标准。
+　　　　非全日制用工劳动报酬结算支付周期最长不得超过十五日。
+
+第六章　监督检查
+
+　　　　第七十三条　国务院劳动行政部门负责全国劳动合同制度实施的监督管理。
+　　　　县级以上地方人民政府劳动行政部门负责本行政区域内劳动合同制度实施的监督管理。
+　　　　县级以上各级人民政府劳动行政部门在劳动合同制度实施的监督管理工作中，应当听取工会、企业方面代表以及有关行业主管部门的意见。
+2026-03-01 18:24:33,449 - services.legal_agent - INFO - ✅ 工具 [search_law_articles] 执行完毕，准备喂回数据...
+2026-03-01 18:24:33,449 - services.legal_agent - INFO - 🧠 带着查到的线索，请求大模型进行终极推理...
+2026-03-01 18:24:42,140 - services.legal_agent - INFO - ✅ 推理完成！
+2026-03-01 19:01:47,637 - Main - INFO - 🚀 法律知识图谱 Agent 系统启动中...
+2026-03-01 19:01:47,668 - services.legal_agent - INFO - 🚀 原生 Function Calling Agent 初始化中...
+2026-03-01 19:02:17,966 - services.legal_agent - INFO - 🧠 Agent 开始思考: 李四试用期的工资，实际发了多少钱？
+2026-03-01 19:02:20,007 - memory.redis_mgr - INFO - 🆕 检测到新会话 user_999，初始化系统人设...
+2026-03-01 19:02:20,171 - Main - ERROR - 💥 发生错误: 'LegalGraphAgent' object has no attribute 'history'
+2026-03-01 19:05:31,960 - Main - INFO - 🚀 法律知识图谱 Agent 系统启动中...
+2026-03-01 19:05:31,965 - services.legal_agent - INFO - 🚀 原生 Function Calling Agent 初始化中...
+2026-03-01 19:05:38,572 - services.legal_agent - INFO - 🧠 Agent 开始思考: 李四试用期的工资，实际发了多少钱？
+2026-03-01 19:05:40,623 - memory.redis_mgr - INFO - 🧠 成功从 Redis 唤醒会话 user_999 的 1 条记忆！
+2026-03-01 19:05:42,323 - services.legal_agent - INFO - 🛠️ 大模型决策：我需要调用外部工具！
+2026-03-01 19:05:42,326 - services.legal_agent - INFO - 👉 执行工具: search_case_details | 参数: {'entity_name': '李四'}
+2026-03-01 19:05:42,326 - services.legal_agent - INFO - 🔍 正在深入图谱进行 2 跳漫游查询: 李四
+2026-03-01 19:05:44,516 - services.legal_agent - INFO - ✅ 工具 [search_case_details] 执行完毕，准备喂回数据...
+2026-03-01 19:05:44,517 - services.legal_agent - INFO - 🧠 带着查到的线索，请求大模型进行终极推理...
+2026-03-01 19:05:53,412 - services.legal_agent - INFO - ✅ 推理完成！
+2026-03-01 19:06:05,333 - Main - INFO - 🚀 法律知识图谱 Agent 系统启动中...
+2026-03-01 19:06:05,340 - services.legal_agent - INFO - 🚀 原生 Function Calling Agent 初始化中...
+2026-03-01 19:06:13,537 - services.legal_agent - INFO - 🧠 Agent 开始思考: 那我刚问的那笔钱，公司这么发合法吗？
+2026-03-01 19:06:15,567 - memory.redis_mgr - INFO - 🧠 成功从 Redis 唤醒会话 user_999 的 5 条记忆！
+2026-03-01 19:06:18,227 - services.legal_agent - INFO - 🛠️ 大模型决策：我需要调用外部工具！
+2026-03-01 19:06:18,240 - services.legal_agent - INFO - 👉 执行工具: search_law_articles | 参数: {'keyword': '试用期工资规定'}
+2026-03-01 19:06:18,242 - services.legal_agent - INFO - 📚 正在翻阅法典，检索关键词: 试用期工资规定
+2026-03-01 19:06:18,242 - services.llm_service - INFO - 🧬 正在生成文本向量...
+2026-03-01 19:06:18,584 - services.legal_agent - INFO - ⚖️ 成功精准检索到以下法条：
+第十九条　劳动合同期限三个月以上不满一年的，试用期不得超过一个月；劳动合同期限一年以上不满三年的，试用期不得超过二个月；三年以上固定期限和无固定期限的劳动合同，试用期不得超过六个月。
+　　　　同一用人单位与同一劳动者只能约定一次试用期。
+　　　　以完成一定工作任务为期限的劳动合同或者劳动合同期限不满三个月的，不得约定试用期。
+　　　　试用期包含在劳动合同期限内。劳动合同仅约定试用期的，试用期不成立，该期限为劳动合同期限。
+　　　　第二十条　劳动者在试用期的工资不得低于本单位相同岗位最低档工资或者劳动合同约定工资的百分之八十，并不得低于用人单位所在地的最低工资标准。
+　　　　第二十一条　在试用期中，除劳动者有本法第三十九条和第四十条第一项、第二项规定的情形外，用人单位不得解除劳动合同。用人单位在试用期解除劳动合同的，应当向劳动者说明理由。
+　　　　第二十二条　用人单位为劳动者提供专项培训费用，对其进行专业技术培训的，可以与该劳动者订立协议，约定服务期。
+　　　　劳动者违反服务期约定的，应当按照约定向用人单位支付违约金。违约金的数额不得超过用人单位提供的培训费用。
+
+第七十条　非全日制用工双方当事人不得约定试用期。
+　　　　第七十一条　非全日制用工双方当事人任何一方都可以随时通知对方终止用工。终止用工，用人单位不向劳动者支付经济补偿。
+　　　　第七十二条　非全日制用工小时计酬标准不得低于用人单位所在地人民政府规定的最低小时工资标准。
+　　　　非全日制用工劳动报酬结算支付周期最长不得超过十五日。
+
+第六章　监督检查
+
+　　　　第七十三条　国务院劳动行政部门负责全国劳动合同制度实施的监督管理。
+　　　　县级以上地方人民政府劳动行政部门负责本行政区域内劳动合同制度实施的监督管理。
+　　　　县级以上各级人民政府劳动行政部门在劳动合同制度实施的监督管理工作中，应当听取工会、企业方面代表以及有关行业主管部门的意见。
+2026-03-01 19:06:18,585 - services.legal_agent - INFO - ✅ 工具 [search_law_articles] 执行完毕，准备喂回数据...
+2026-03-01 19:06:18,597 - services.legal_agent - INFO - 🧠 带着查到的线索，请求大模型进行终极推理...
+2026-03-01 19:06:28,105 - services.legal_agent - INFO - ✅ 推理完成！
+2026-03-01 20:10:18,769 - Main - INFO - 🚀 法律知识图谱 Agent 系统启动中...
+2026-03-01 20:10:18,777 - services.legal_agent - INFO - 🚀 原生 Function Calling Agent 初始化中...
