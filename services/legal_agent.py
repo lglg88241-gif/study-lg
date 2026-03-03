@@ -9,7 +9,15 @@ from database.chroma_mgr import chroma_mgr
 # 🌟 新增：引入 Redis 记忆引擎
 from memory.redis_mgr import memory_mgr
 logger = logging.getLogger(__name__)
-
+from sentence_transformers import CrossEncoder
+# 🌟 全局初始化重排模型（只在 Uvicorn 启动时加载一次）
+# device='cpu' 适配你当前的本地环境
+try:
+    reranker_model = CrossEncoder('BAAI/bge-reranker-base', device='cpu')
+    logging.info("✅ BGE-Reranker 模型全局加载成功！")
+except Exception as e:
+    logging.error(f"❌ BGE-Reranker 模型加载失败: {e}")
+    reranker_model = None
 class LegalGraphAgent:
     def __init__(self, client: AsyncOpenAI):
         self.client = client
@@ -88,30 +96,55 @@ class LegalGraphAgent:
             return f"图数据库中未找到关于 {entity_name} 的线索。"
         
         return "\n".join(records)
-    # 🌟 2. 新增物理执行层：去 ChromaDB 查法条
+    
+    # 🌟 2. 升级版物理执行层：去 ChromaDB 查法条 (粗排 + 精排双擎)
     async def _execute_chroma_search(self, keyword: str) -> str:
-        logger.info(f"📚 正在翻阅法典，检索关键词: {keyword}")
+        logger.info(f"📚 [Step 1: 粗排] 正在 ChromaDB 中撒大网，检索关键词: {keyword}")
         
         # 将关键词转为 1024 维向量
         query_vector = await llm_service.get_vector(keyword)
         if not query_vector:
             return "向量生成失败，无法检索法条。"
             
-        # 在 ChromaDB 中进行相似度搜索
+        # 1. 粗排召回：在 ChromaDB 中进行相似度搜索
         collection = chroma_mgr.get_collection()
         results = collection.query(
             query_embeddings=[query_vector],
-            n_results=2 # 拿最相关的 2 条法条
+            n_results=10 # 🌟 核心修改：从 2 改为 10！先捞出 10 条候选数据
         )
         
         documents = results.get('documents', [[]])[0]
         if not documents:
             logger.warning(f"⚠️ 遗憾，未找到与 '{keyword}' 相关的法律条文。")
             return f"未找到与 '{keyword}' 相关的法律条文。"
-        # 👇 🌟 你的严谨优化：将查到的法条拼接后，直接用日志打印在控制台上！
-        law_content = "\n\n".join(documents)
-        logger.info(f"⚖️ 成功精准检索到以下法条：\n{law_content}")    
-        return law_content
+            
+        # 2. 容灾降级机制：如果 BGE 模型在内存中加载失败，直接返回粗排的前两名，保证系统不死机
+        if reranker_model is None:
+            law_content = "\n\n".join(documents[:2])
+            logger.info(f"⚖️ (降级模式) 返回粗排法条：\n{law_content}")    
+            return law_content
+            
+        logger.info(f"🧠 [Step 2: 精排] Reranker 正在对 {len(documents)} 条候选法条进行深度交叉打分...")
+        
+        # 3. 构造交叉打分对：[[问题, 法条1], [问题, 法条2], ...]
+        pairs = [[keyword, doc] for doc in documents]
+        
+        # 4. 让 BGE 模型进行深度阅读理解打分
+        rerank_scores = reranker_model.predict(pairs)
+        
+        # 5. 将文档和分数打包，并按分数从高到低排序
+        scored_candidates = sorted(zip(documents, rerank_scores), key=lambda x: x[1], reverse=True)
+        
+        # 6. 🌟 工业级阈值拦截：只取分数 > 0.1 且排名前 2 的绝对高质量法条
+        top_docs = [doc for doc, score in scored_candidates if score > 0.1][:2]
+        
+        if top_docs:
+            law_content = "\n\n".join(top_docs)
+            logger.info(f"🎯 重排完成！最终精准检索到的绝杀法条：\n{law_content}")
+            return law_content
+        else:
+            logger.warning("⚠️ 警告：精排后所有法条相关性均未达标，已主动拦截噪音数据，防止大模型产生幻觉。")
+            return "本地知识库未检索到与该问题高度相关的明确法条。"
     async def ask(self, session_id: str, question: str) -> str:
         logger.info(f"🧠 Agent 开始思考: {question}")
         
@@ -191,3 +224,12 @@ class LegalGraphAgent:
                         await memory_mgr.pop_last_message(session_id)
                         # 给用户返回一个优雅的错误提示，而不是让前端直接死机
                         return f"抱歉，AI 律师在翻阅系统卷宗时遇到了网络波动（{str(e)}），请稍后重新提问。"
+        # 👇 🌟 新增补漏分支：大模型决定直接回答（闲聊或依靠记忆）
+        else:
+            logger.info("💬 大模型决策：无需工具，直接利用记忆/知识回答。")
+            final_answer = response_message.content
+            
+            # 同样要把大模型的直接回答写进 Redis 记忆里，保证上下文连贯！
+            await memory_mgr.save_message(session_id, {"role": "assistant", "content": final_answer})
+            return final_answer
+                    

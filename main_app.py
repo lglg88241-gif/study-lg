@@ -1,4 +1,6 @@
 import os
+# 🌟 新增这一行：强制将所有 HuggingFace 的请求重定向到国内官方镜像站！
+os.environ["HF_ENDPOINT"] = "https://hf-mirror.com"
 os.environ["NO_PROXY"] = "dashscope.aliyuncs.com"
 from fastapi import FastAPI, Depends
 from openai import AsyncOpenAI
@@ -7,13 +9,19 @@ from services.legal_agent import LegalGraphAgent
 from api.auth_router import router as auth_router
 from api.auth_router import get_current_user # 刚才写的保安
 from models.user import User
-
+import logging
 app = FastAPI(title="双刀流 AI 法律 SaaS 平台")
 
+# 🌟 2. 配置全局日志基座：强制输出 INFO 级别，并带上时间戳和模块名
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(name)s - %(message)s",
+    force=True
+)
 # 1. 初始化 Agent (全局共享一个 Agent 实例，靠 session_id 隔离记忆)
 client = AsyncOpenAI(api_key=settings.api_key, base_url=settings.base_url)
 legal_agent = LegalGraphAgent(client)
-
+loger = logging.getLogger(__name__)
 # 2. 挂载路由
 app.include_router(auth_router)
 
