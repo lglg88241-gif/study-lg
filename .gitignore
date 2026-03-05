@@ -1,17 +1,47 @@
-# 虚拟环境
+# Python虚拟环境
 venv/
 env/
+*.env
+.env.local
+.env.prod
+.venv/
 
-# Python 缓存
+# 模型文件/缓存
+models/
+cache/
+huggingface/
+*.bin
+*.safetensors
+snapshot/
+vllm_cache/
+
+# Docker相关（排除本地构建的镜像缓存）
+.dockerignore
+docker-compose.override.yml
+*.dockerfile~
+
+# 日志/临时文件
+*.log
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+.DS_Store
+*.swp
+*.swo
 
-# 环境变量与机密信息（绝对不能上传！）
-.env
-
-# 数据库与本地持久化文件
-chroma_data/
+# 数据文件
+data/
+*.csv
+*.xlsx
 *.db
+*.sqlite3
 
-# IDE 配置文件
+# IDE配置
+.idea/
 .vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

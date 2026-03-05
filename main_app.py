@@ -8,6 +8,8 @@ from config import settings
 from services.legal_agent import LegalGraphAgent
 from api.auth_router import router as auth_router
 from api.auth_router import get_current_user # 刚才写的保安
+from celery_app import celery_app, ask_agent_task
+from celery.result import AsyncResult
 from models.user import User
 import logging
 app = FastAPI(title="双刀流 AI 法律 SaaS 平台")
@@ -26,20 +28,33 @@ loger = logging.getLogger(__name__)
 app.include_router(auth_router)
 
 # 3. 编写核心对话接口
-@app.post("/chat", summary="受保护的 AI 法律咨询接口")
-async def chat(
+@app.post("/chat/async", summary="高并发版：异步提交提问")
+async def chat_async(
     question: str, 
-    # 🌟 这里的 Depends 是精髓：
-    # 只有带了合法 Token 的人才能进来，且我们直接拿到了 current_user 对象！
     current_user: User = Depends(get_current_user) 
 ):
-    # 🌟 真正的“千人千面”：直接用数据库里的 username 或 id 作为 Redis 的 session_id
     session_id = f"user_{current_user.username}"
     
-    # 调用分布式云脑 Agent
-    answer = await legal_agent.ask(session_id=session_id, question=question)
+    # 🌟 瞬间操作：把任务扔给 Redis，直接拿回排队号，耗时 < 0.05 秒！
+    task = ask_agent_task.delay(session_id, question)
     
     return {
-        "user": current_user.username,
-        "answer": answer
+        "status": "任务已受理",
+        "message": "问题已接收，AI 律师正在后台深度查阅卷宗...",
+        "task_id": task.id  # 把取件凭证发给前端
     }
+
+@app.get("/chat/result/{task_id}", summary="前端轮询：获取咨询结果")
+async def get_chat_result(task_id: str):
+    # 🌟 拿着凭证，去 Redis 的 1 号取件柜查状态
+    result = AsyncResult(task_id, app=celery_app)
+    
+    if result.successful():
+        # 跑完了，返回最终大模型的回答
+        return {"status": "SUCCESS", "answer": result.result}
+    elif result.failed():
+        # 出错了，返回错误信息
+        return {"status": "FAILURE", "message": "AI 咨询出错，请稍后再试..."}
+    else:
+        # 还没跑完，让前端继续等着转圈
+        return {"status": "PENDING", "message": "AI 还在疯狂运算中，请稍后再试..."}

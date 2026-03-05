@@ -1,27 +1,25 @@
-import logging
-from sqlalchemy import create_engine
+import os
+from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession
 from sqlalchemy.orm import sessionmaker, declarative_base
-from config import settings
 
-logger = logging.getLogger(__name__)
+# 获取容器环境变量中的异步数据库 URL
+SQLALCHEMY_DATABASE_URL = os.getenv("MYSQL_URL", "mysql+aiomysql://root:root@127.0.0.1:3306/legal_db")
 
-# 1. 创建引擎：相当于你之前的 aiomysql.connect
-engine = create_engine(
-    settings.mysql_url, 
-    pool_pre_ping=True, # 自动重连
-    echo=False          # 设为 True 可以看到底层帮你写的 SQL 语句
+# 🌟 1. 必须使用 create_async_engine
+engine = create_async_engine(SQLALCHEMY_DATABASE_URL, echo=True)
+
+# 🌟 2. sessionmaker 必须指定 class_=AsyncSession
+SessionLocal = sessionmaker(
+    bind=engine,
+    class_=AsyncSession,
+    autocommit=False,
+    autoflush=False,
+    expire_on_commit=False # 异步环境下这个极其重要，防止 commit 后访问属性报错
 )
 
-# 2. 会话工厂：每次查数据库从这里拿一个 session
-SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
-
-# 3. ORM 基类：所有的表模型都要继承它
 Base = declarative_base()
 
-# 4. 依赖注入函数（预留给 FastAPI 用）
-def get_db():
-    db = SessionLocal()
-    try:
-        yield db
-    finally:
-        db.close() # 相当于你代码里的 conn.close()
+# 🌟 3. get_db 必须是 async 函数，并且 yield 的是 AsyncSession
+async def get_db():
+    async with SessionLocal() as session:
+        yield session

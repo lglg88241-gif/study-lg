@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException, status
-from fastapi.security import OAuth2PasswordBearer ,OAuth2PasswordRequestForm
-
-from sqlalchemy.orm import Session
+from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
+from sqlalchemy import select
+from sqlalchemy.ext.asyncio import AsyncSession  # 🌟 必须用这个类型
 from pydantic import BaseModel
 from jose import JWTError, jwt
 
@@ -12,20 +12,18 @@ from utils.auth_utils import SECRET_KEY, ALGORITHM
 
 router = APIRouter(prefix="/auth", tags=["身份验证"])
 
-# 前端发来的请求体规范
 class UserAuth(BaseModel):
     username: str
     password: str
 
-# 令牌响应规范
 class Token(BaseModel):
     access_token: str
     token_type: str = "bearer"
 
-# 🌟 核心门卫：提取 Token 并去数据库核实身份
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="auth/login")
 
-async def get_current_user(token: str = Depends(oauth2_scheme), db: Session = Depends(get_db)):
+# ✅ 1. 门卫鉴权异步改造
+async def get_current_user(token: str = Depends(oauth2_scheme), db: AsyncSession = Depends(get_db)):
     credentials_exception = HTTPException(
         status_code=status.HTTP_401_UNAUTHORIZED,
         detail="认证失败，请重新登录",
@@ -39,14 +37,20 @@ async def get_current_user(token: str = Depends(oauth2_scheme), db: Session = De
     except JWTError:
         raise credentials_exception
         
-    user = db.query(User).filter(User.username == username).first()
+    result = await db.execute(select(User).filter(User.username == username))
+    user = result.scalar_one_or_none()
+    
     if user is None:
         raise credentials_exception
     return user
 
+# ✅ 2. 注册接口异步改造
 @router.post("/register", summary="新用户注册")
-async def register(user_data: UserAuth, db: Session = Depends(get_db)):
-    db_user = db.query(User).filter(User.username == user_data.username).first()
+async def register(user_data: UserAuth, db: AsyncSession = Depends(get_db)):
+    # 🌟 必须使用 await db.execute(select(...))
+    result = await db.execute(select(User).filter(User.username == user_data.username))
+    db_user = result.scalar_one_or_none()
+    
     if db_user:
         raise HTTPException(status_code=400, detail="用户名已被占用")
     
@@ -55,15 +59,16 @@ async def register(user_data: UserAuth, db: Session = Depends(get_db)):
         hashed_password=get_password_hash(user_data.password)
     )
     db.add(new_user)
-    db.commit()
-    db.refresh(new_user)
+    await db.commit()          # 🌟 必须 await
+    await db.refresh(new_user) # 🌟 必须 await
     return {"message": "注册成功", "user_id": new_user.id}
 
+# ✅ 3. 登录接口异步改造
 @router.post("/login", response_model=Token, summary="用户登录")
-# 🌟 修改点 2：把 user_data 换成 form_data: OAuth2PasswordRequestForm = Depends()
-async def login(form_data: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get_db)):
-    # 🌟 下面的 user_data 全部换成 form_data
-    db_user = db.query(User).filter(User.username == form_data.username).first()
+async def login(form_data: OAuth2PasswordRequestForm = Depends(), db: AsyncSession = Depends(get_db)):
+    result = await db.execute(select(User).filter(User.username == form_data.username))
+    db_user = result.scalar_one_or_none()
+    
     if not db_user or not verify_password(form_data.password, db_user.hashed_password):
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="用户名或密码错误")
     
